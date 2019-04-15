@@ -1,0 +1,149 @@
+@import "_variables";
+
+.Stream {
+  display: block;
+  width: calc(100% - 17.5vw);
+  top: 73px;
+  .stream-block {
+    width: 1147px;
+    margin: 35px auto 0;
+    .stream-title-viewers {
+      display: flex;
+      justify-content: space-between;
+      .stream-title, .stream-viewers{
+        .pink {
+          color: $light-pink;
+        }
+        color: #333;
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: -9px;
+        }
+        h4 {
+          font-size: 0.9rem;
+        }
+      }
+      .stream-viewers {
+        h3, h4 {
+          text-align: center;
+        }
+      } 
+    }
+    .stream-iframe {
+      height: 648px;
+    }
+    .stream-fsdt-buttons {
+      display: flex;
+      justify-content: space-between;
+      .stream-fsd-buttons, .stream-theater-mode-button {
+        margin-top: 10px;
+        button, a {
+          display: inline-block;
+          border: 0;
+          font-size: 1.1rem;
+          font-family: $baloo;
+          border-radius: 4px;
+          background: $light-pink;
+          color: #EEE;
+          box-shadow: 1px 1px 4px #444;
+          padding: 0;
+          cursor: pointer;
+          text-decoration: none;
+          .display-name {
+            display: inline-block;
+            padding: 7px;
+            height: 20px;
+          }
+          .stream-fsdt-buttons-icon {
+            display: inline-block;
+            padding: 10px 7px 4px 7px;
+            height: 25px;
+            background: #a93bc7;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            vertical-align: middle;
+          }
+        }
+        a:nth-child(2) {
+          margin: 0 20px
+        }
+      }
+    }
+    
+  }
+}
+
+.night-mode {
+  .Stream {
+    .stream-block {
+      .stream-title-viewers {
+        .stream-title, .stream-viewers{
+          color: #EEE;
+        }
+      }
+    }
+  }
+}
+.stream-app-navbar-theater {
+  display: none;
+}
+.theater-mode {
+  .stream-app-navbar-theater {
+    position: fixed;
+    display: flex;
+    width: calc(100% - 25.5vw);
+    right: 17.5vw;
+    z-index: 2000;
+    .stream-title-viewers {
+      display: flex;
+      width: 100%;
+      .stream-title, .stream-viewers{
+        margin-top: 10px;
+        .pink {
+          color: $light-pink;
+        }
+        color: #333;
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: -9px;
+        }
+        h4 {
+          font-size: 0.9rem;
+        }
+      }
+      .stream-viewers {
+        margin-left: auto;
+        margin-right: 20px;
+        h3, h4 {
+          text-align: center;
+        }
+      }
+      .leave-theater-button {
+        width: 350px;
+        height: 71px;
+        button {
+          width: 100%;
+          height: 100%;
+          border: 0;
+          background: #DDD;
+          font-size: 1.4rem;
+          font-family: $baloo, sans-serif;
+          color: #333;
+        }
+      }
+    }
+  }
+  .Stream .stream-block {
+    position: fixed;
+    margin: 0 auto;
+    width: calc(100% - 17.5vw);
+    height: calc(100vh - 73px);
+    .stream-iframe {
+      height: 100%;
+    }
+    .stream-title-viewers,
+    .stream-fsdt-buttons {
+      display: none;
+    }
+  }
+}

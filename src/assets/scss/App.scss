@@ -1,0 +1,59 @@
+@import '_variables';
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  //font-family: VampireCalligraphy, sans-serif;
+  font-family: $baloo, sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+  height: 100vh;
+  background: #FFF;
+}
+body.night-mode {
+  background: rgba(13, 14, 16, 0.9);
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+a, a:hover, a:active, a:link, a:visited {
+  color: #000;
+}
+.app-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  .Stream, .Leaderboard, .Planning, .Informations, .Rediffusions, .NotFound {
+    position: absolute;
+    display: block;
+    height: calc(100vh - 73px);
+  }
+}
+.app-modal-snap-code-title{
+  text-align: center;
+}
+.styles_modal__gNwvD {
+  border-radius: 10px;
+}
+
+.fa-circle {
+  font-size: 12px;
+}
+
+.chat-left .app-container {
+  .Stream, .Leaderboard, .Planning, .Informations, .Rediffusions, .NotFound {
+    right: 0;
+  }
+}

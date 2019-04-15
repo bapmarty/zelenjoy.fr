@@ -1,0 +1,24 @@
+@import '_variables';
+.NotFound {
+    text-align: center;
+}
+.NotFoundImage {
+    background: url("../images/404.png") no-repeat;
+    background-size: contain;
+    margin: auto;
+    margin-top: 15%;
+    width: 342px;
+    height: 289px;
+
+}
+.NotFoundImage:hover {
+    background-image: url("../images/404-hover.png");
+}
+
+.NotFound-text {
+    text-align: center;
+    color: #333;
+}
+.night-mode .NotFound-text {
+    color: #EEE;
+}

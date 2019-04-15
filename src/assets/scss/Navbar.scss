@@ -1,0 +1,217 @@
+@import "_variables";
+
+.app-navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 71px;
+  top: 0;
+  background: #eeeeee;
+  border-bottom: 2px solid $light-pink;
+  z-index: 990;
+  .app-navbar-title {
+    margin-top: -5px;
+    padding: 0 0 0 25px;
+    a {
+      text-decoration: none;
+      color: $light-pink;
+    }
+    .app-navbar-title-text {
+      display: block;
+      font-family: VampireCalligraphy;
+      font-size: 2.4rem;
+      transform: rotate(-7deg);
+      padding: 5px 0;
+    }
+  }
+  .app-nav-list {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 21px;
+    a {
+      margin: 0 7px 0;
+      font-size: 18px;
+      text-decoration: none;
+      color: #333;
+      transition: color .2s ease-out;
+      i {
+        vertical-align: top;
+        margin-top: 8px;
+      }
+      .online-mode {
+        color: #E22;
+      }
+      .offline-mode {
+        color: #333;
+      }
+
+    }
+    a:hover { 
+      color: $light-pink;
+      transition: color .2s ease-in;
+    }
+    .link-is-active {
+      color: $light-pink;
+    }
+
+  }
+  .app-other-links {
+    margin: 5px 20px 0 auto;
+    ul {
+      li {
+        width: 30px;
+        height: 25px;
+        line-height: 27px;
+        display: inline-block;
+        margin: 0;
+        text-align: center;
+        a, div {
+          display: inline-block;
+          width: 100%;
+          font-size: 18px;
+          vertical-align: middle;
+          transition: font-size .1s ease-out;
+          cursor: pointer;
+        }
+        a:hover, div:hover {
+          font-size: 25px;
+          transition: font-size .1s ease-in;
+        }
+      }
+    }
+  }
+  .app-login-settings-buttons {
+    position: relative;
+    display: flex;
+    width: 17.5vw;
+    background: $light-pink;
+    z-index: 1000;
+    a {
+      color: #FFF;
+      transition: color .2s ease-out;
+      text-decoration: none;
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color .2s ease-in;
+    }
+    .oauth-twitch-block, .app-stream-connected {
+      display: flex;
+      width: calc(100% - 75px);
+      height: 73px;
+      padding: 0 0 0 15px;
+      margin-right: auto;
+      cursor: pointer;
+      .oauth-twitch-text, .app-stream-stats {
+        margin-right: auto;
+        h2 {
+          font-size: 1.8rem;
+          margin-top: 5px;
+        }
+        h3 {
+          font-size: 1.1rem;
+          margin-top: -15px;
+        }
+      }
+      .app-stream-stats {
+        
+      }
+      .oauth-twitch-icon, .app-stream-connected {
+        display: block;
+        height: 100%;
+        padding: 0 12px;
+        font-size: 40px;
+        i {transform: translate3d(0, 20%, 0);}
+      }
+      .app-stream-connected-logo{
+        position: absolute;
+        top: 50%;
+        right: 72px;
+        transform: translate3d(0, -50%, 0);
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+    .app-settings-website {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      background: $light-pink;
+      cursor: pointer;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.1);
+      .app-settings-website-icon {
+        display: block;
+        font-size: 1.4rem;
+        i {
+          transform: translate3d(0, 82%, 0);
+          text-shadow: 2px 2px 3px #0005;
+          color: #EEE;
+        }
+      }
+    }
+  }
+  .account-settings-hide, .account-settings-show {
+    position: absolute;
+    background: #EEE;
+    display: block;
+    width: 17.5vw;
+    z-index: -1;
+    .account-setting {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: #333;
+    }
+    .account-setting:hover {
+      border-left: 5px solid $light-pink;
+      transition: border-left .2s ease-in-out;
+    }
+  }
+  .account-settings-hide {
+    top: 0;
+    transition: top .4s ease-out;
+  }
+  .account-settings-show {
+    top: 72px;
+    transition: top .4s ease-in;
+  }
+}
+.night-mode {
+  .app-navbar {
+    background: #0F0e10;
+    .app-nav-list {
+      a {
+        color: #EEE;
+      }
+      a:hover {
+        color: $light-pink;
+      }
+      .link-is-active {
+        color: $light-pink;
+      }
+    }
+    .account-settings-hide, .account-settings-show {
+      background: #333;
+      .account-setting {
+        color: #EEE;
+      }
+    }
+  }
+}
+
+.theater-mode {
+  .app-navbar {
+    .app-nav-list, .app-other-links {
+      display: none;
+    }
+    .app-account-login-settings-buttons {
+      margin-left: auto;
+    }
+  }
+}

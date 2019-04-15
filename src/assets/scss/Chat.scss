@@ -1,0 +1,204 @@
+@import "_variables";
+
+.app-chat-settings {
+  .app-chat {
+    position: fixed;
+    display: block;
+    top: 23px;
+    bottom: 0;
+    width: 17.5vw;
+    height: 100%;
+    iframe {
+      height: calc(100% - 23px);
+      z-index: -1;
+    }
+  }
+  .settings {
+    .settings-panel {
+      position: fixed;
+      display: block;
+      height: 100%;
+      width: 17.5vw;
+      top: 0;
+      background: #EEE;
+      z-index: 1000;
+      .settings-panel-header {
+        display: flex;
+        height: 73px;
+        padding: 0 0 0 15px;
+        background: $light-pink;
+        h2 {
+          margin-top: 13px;
+          font-size: 1.8rem;
+          color: #EEE;
+        }
+        .settings-panel-img {
+          height: 100%;
+          width: 70px;
+          background: rgba(0, 0, 0, 0.1);
+          margin-left: auto;
+          img {
+            margin: 21px 0 0 23px;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+          }
+        }
+      }
+      .settings-panel-list {
+        width: 90%;
+        margin: 0 auto;
+        .settings-panel-block {
+          display: flex;
+          margin: 30px 0; 
+          justify-content: space-between;
+          .settings-panel-desc {
+            h3 {
+              font-size: 1.6rem;
+              color: $light-pink;
+              margin-bottom: -10px;
+            }
+            p {
+              font-size: 0.8rem;
+            }
+          }
+          .settings-panel-icon {
+            margin-top: 10px;
+            i {
+              font-size: 1.8rem;
+              color: #333;
+              cursor: pointer;
+            }
+            i.fa-toggle-on {
+              color: $light-pink;
+            }
+          }
+        }
+      }
+
+      .settings-panel-footer {
+        position: absolute;
+        display: block;
+        bottom: 10px;
+        width: 100%;
+        .settings-panel-footer-text {
+          text-align: center;
+          color: #333;
+          i {
+            font-size: 0.5rem;
+            vertical-align: middle;
+            margin: -2px 5px 0;
+          }
+          a, span{
+            display: inline;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color .3s ease-out;
+          }
+          a:hover, span:hover {
+            color: $light-pink;
+            transition: color .3s ease-in;
+          }
+        }
+      }
+    }
+  }
+  .settings.hide-settings {
+    .settings-panel {
+      right: -17.5vw;
+      opacity: 0.3;
+      transition: all .2s ease-out;
+    }
+    .dark-background-settings-panel {
+      display: none;
+    }
+  }
+  .settings.show-settings {
+    .settings-panel {
+      right: 0;
+      opacity: 1;
+      transition: all .2s ease-in;
+    }
+    .dark-background-settings-panel {
+      position: fixed;
+      display: block;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+    }
+  }
+}
+
+.night-mode {
+  .app-chat-settings {
+    .settings {
+      .settings-panel {
+        background: #0F0e10;
+        .settings-panel-list {
+          .settings-panel-block {
+            .settings-panel-desc {
+              h2, p {
+                color: #EEE;
+              }
+            }
+            .settings-panel-icon {
+              i.fa-toggle-off {
+                color: #EEE;
+              }
+            }
+          }
+        }
+        .settings-panel-footer {
+          .settings-panel-footer-text {
+            color: #EEE;
+            a, span{
+              color: #EEE;
+            }
+            a:hover, span:hover{
+              color: $light-pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.container-modal-credits {
+  display: flex;
+  height: 68px;
+  width: 364px;
+  .modal-credits-logo {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate3d(0, -44%, 0);
+    img {
+      border-radius: 50%;
+    }
+  }
+  .modal-credits-title {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate3d(0, -44%, 0);
+    a {
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $light-pink;
+      transition: color .2s ease-in-out;
+    }
+  }
+}
+
+.chat-left .app-chat {
+  left: 0;
+}
+.app-chat {
+  right: 0;
+}
