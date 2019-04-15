@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@font-face {
+  font-family: VampireCalligraphy;
+  src: url(../fonts/Vampire-Calligraphy.ttf);
+}
+$baloo: 'Baloo Bhaijaan';
+$opensans: 'Open Sans';
+
+//colors
+$light-pink: rgba(188, 66, 222, 1);
+
+#discord-color {
+  color: rgba(114, 137, 218, 1);
+}
+#twitter-color {
+  color: rgba(30, 161, 242, 1);
+}
+#twitch-color {
+  color: rgba(100, 65, 164 , 1);
+}
+#instagram-color {
+  color: rgba(187, 0, 176, 1);
+}
+#snap-color {
+  color: rgba(218, 185, 0, 1);
+}
